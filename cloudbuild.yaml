@@ -5,7 +5,7 @@ steps:
            'us-central1-docker.pkg.dev/$PROJECT_ID/$REPO_NAME/hello-world-python:$SHORT_SHA', '.']
 
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push',  'us-central1-docker.pkg.dev/$PROJECT_ID/$REPO_NAME/hello-world-python:$SHORT_SHA']
+    args: ['push',  'us-central1-docker.pkg.dev/$PROJECT_ID/hello-world-python:$SHORT_SHA']
 
   - name: google/cloud-sdk
     args: ['gcloud', 'run', 'deploy', 'hello-world-python', 
